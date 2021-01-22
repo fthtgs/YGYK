@@ -25,27 +25,14 @@ namespace myDictionaryHW
             
 
 
-            /*
+            
             MyDictionary2<int, string> cities3 = new MyDictionary2<int, string>();
             cities3.Add(01, "Adana");
             cities3.Add(16, "Bursa");
             //cities3.Add(16, "Bursa");
             Console.WriteLine(cities3.Count);
             //Console.WriteLine(cities3[1]);
-            */
-
-            /*
-            int x = 100;
-
-            int* ptr = &x;
-            Console.WriteLine((int)ptr); // Displays the memory address  
-            Console.WriteLine(*ptr); // Displays the value at the memory address. 
-            */
-
-
-
-
-
+            
         }
         
     }
