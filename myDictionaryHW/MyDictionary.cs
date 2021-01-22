@@ -22,7 +22,7 @@ namespace myDictionaryHW
             {
                 if (checkvalue.Equals(key))
                 {
-                    throw new ArgumentException();
+                    throw new ArgumentException("Same key-value was used before!");
                 }
             }
 
@@ -44,8 +44,15 @@ namespace myDictionaryHW
         {
             get { return _key.Length; }
         }
-        
-        //public TValue this[TKey key] { get { return _value.Equals(key)]; } }
+
+        public TValue this[TKey key]
+        {
+            get
+            {
+                int index = Array.IndexOf(_key, key);
+                return _value[index];
+            }
+        }
 
     }
 }

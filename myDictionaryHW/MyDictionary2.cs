@@ -15,7 +15,7 @@ namespace myDictionaryHW
             {
                 if (checkvalue.Equals(key))
                 {
-                    throw new ArgumentException();
+                    throw new ArgumentException("Same key-value was used before!");
                 }
             }
             _key.Add(key);
@@ -26,7 +26,16 @@ namespace myDictionaryHW
         {
             get { return _key.Count; }
         }
-        
+
+        public TValue this[TKey key]
+        {
+            get
+            {
+                int index = _key.IndexOf(key);
+                return _value[index];
+            }
+        }
+
 
 
     }
